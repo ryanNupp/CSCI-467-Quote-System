@@ -8,7 +8,25 @@
 <body>
     <h1>Admin interface</h1>
     <a href="index.html">
-        <button>Go back to Log In</button>
+        <button>Log Out</button>
     </a>
+
+    <h2>Sales Associates</h2>
+    <p>In the future this will be a table displaying all sales associates.
+        There will be opportunity to 'Edit' or 'Delete' any said associate.
+    </p>
+
+    <h2>Add New Associate</h2>
+    <form action="/handling" method="post">
+        <li>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </li>
+        <li>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+        </li>
+    </form>
+    <button>Submit New Associate</button>
 </body>
 </html>
