@@ -3,21 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
     <title>Log In</title>
 </head>
 <body>
-    <h>Please log in bro.</h>
-    <form action="/handling" method="post">
-        <li>
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username">
-        </li>
-        <li>
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password">
-        </li>
-    </form>
-    <button>Log In</button>
+    <div class="center">
+        <h1>Please log in bro.</h1>
+        <form action="/handling" method="post">
+            <li>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </li>
+            <li>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </li>
+        </form>
+        <button>Log In</button>
+    </div>
     <p>Temporary test buttons while log in functionality is being worked out:</p>
     <a href="admin.html">
         <button>Admin Interface</button>
