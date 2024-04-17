@@ -8,19 +8,16 @@
 </head>
 <body>
 
+	<h1>Convert Quote to Purchase Order</h1>
+
     <form method="post">
 
-   <label for="quoteID">Quote ID:</label>
+	<label for="quoteID">Quote ID:</label>
     <input type="number" id="quoteID" name="quoteID"><br><br>
-
-
-
 
 	<!-- Search by quote id and display info about quote -->
 	<input type="button" name="search" value="Search Quote"><br><br>
 	<label>QUOTE INFO</label><br><br>
-
-
 
     <label for="discount">Final Discount:</label>
     <input type="number" id="discount" name="discount"><br><br>
@@ -29,14 +26,11 @@
     <label for="flat_discount"><input type="radio" name="discount_type" value="flat_discount">Flat Discount</label><br>
     <label for="percent_discount"><input type="radio" name="discount_type" value="percent_discount">Percent Discount</label><br><br><br>
 
-
 	<!-- Calculate final price 
     flat final=price-discount
     percent final=price*(1-discount)
     -->
     <label>FINAL PRICE</label><br><br><br>
-
-
 
     <!--upon submission:
     add sale to associate commission
@@ -45,7 +39,7 @@
     <input type="submit" value="Submit Order">
     </form><br>
 
-
+	<!--supposed to go under associate or admin?-->
     <a href="associate.html">
         <button>Go back to Associate Page</button>
     </a>
