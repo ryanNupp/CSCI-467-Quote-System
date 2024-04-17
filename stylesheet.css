@@ -1,15 +1,12 @@
 body{
   background-color: black;
+  color: white;
 }
 h1{
   color: white;
   margin-left: 20px;
 }
 p{
-  color: white;
-  margin-left: 20px;
-}
-label{
   color: white;
   margin-left: 20px;
 }
