@@ -4,18 +4,6 @@ body{
   list-style-type: none;
 }
 
-h1{
-  color: white;
-  margin-left: 20px;
-  font-weight: bold;
-  font-size: 32px;
-}
-
-p{
-  color: white;
-  margin-left: 20px;
-}
-
 .center {
   background-color: RGB(73, 73, 73);
   margin: auto;
