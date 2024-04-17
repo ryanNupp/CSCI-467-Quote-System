@@ -1,48 +1,57 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <link rel="stylesheet" href="stylesheet.css">
-  <title>Associate Quote Editor</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>Associate Quote Editor</title>
 </head>
+
 <body>
+    <h1>Quote Editor</h1>
+    <div class="navbar">
+        <ul>
+            <li><a href="quote_editor.html">Quote Editor</a></li>
+            <li><a href="quote_sanction.html">Quote Sanctioning</a></li>
+            <li id="right"><a href="index.html">Log Out</a></li>
+        </ul>
+    </div>
 
-<h1>Quote Editor</h1>
+    <form>
+        <label for="startdate">Date From:</label>
+        <input type="text" id="startdate" name="startdate">
+        <label for="enddate">To:</label>
+        <input type="text" id="enddate" name="enddate">
+    </form>
 
-<form>
-  <label for="startdate">Date From:</label>
-  <input type="text" id="startdate" name="startdate">
-  <label for="enddate">To:</label>
-  <input type="text" id="enddate" name="enddate">
-</form> 
+    <label for="status">Status:</label>
+    <select name="status" id="status">
+        <option value="all">All</option>
+        <option value="open">Open</option>
+        <option value="finalized">Finalized</option>
+        <option value="sanctioned">Sanctioned</option>
+        <option value="ordered">Ordered</option>
+    </select>
 
-<label for="status">Status:</label>
-<select name="status" id="status">
-  <option value="all">All</option>
-  <option value="open">Open</option>
-  <option value="finalized">Finalized</option>
-  <option value="sanctioned">Sanctioned</option>
-  <option value="ordered">Ordered</option>
-</select>
+    <label for="selectAssociate">Select Associate:</label>
+    <select name="selectAssociate" id="selectAssociate">
+        <option value="all">All</option>
+        <option value="placeholderoption">Placeholder</option>
+    </select>
 
-<label for="selectAssociate">Select Associate:</label>
-<select name="selectAssociate" id="selectAssociate">
-  <option value="all">All</option>
-  <option value="placeholderoption">Placeholder</option>
-</select> 
+    <label for="selectCustomer">Select customer:</label>
+    <select name="selectCustomer" id="selectCustomer">
+        <option value="all">all</option>
+        <option value="placeholderoption">Placeholder</option>
+    </select>
 
-<label for="selectCustomer">Select customer:</label>
-<select name="selectCustomer" id="selectCustomer">
-  <option value="all">all</option>
-  <option value="placeholderoption">Placeholder</option>
-</select> 
+    <div>
+        <p> Qn (date): Associate Name - Corporation Name............price (status)
+            <button type="button" onclick="alert('code goes here')">View</button>
+        </p>
+    </div>
 
-<div>
-  <p> Qn (date): Associate Name - Corporation Name............price (status)
-  <button type="button" onclick="alert('code goes here')">View</button>
-  </p>
-</div>
-
-<h2> isnertnumberhere quotes found</h2>
+    <h2> isnertnumberhere quotes found</h2>
 
 </body>
+
 </html>
