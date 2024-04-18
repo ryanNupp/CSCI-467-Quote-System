@@ -4,17 +4,24 @@ body {
     list-style-type: none;
 }
 
+body h1 {
+    text-align: center;
+}
+
 /* Main Div style stuff */
 
 .main-content {
     background-color: RGB(73, 73, 73);
     margin: 0 auto;
     width: 70%;
-    padding: 10px;
 }
 
 #center {
     text-align: center;
+}
+
+.main-content * {
+    padding: 10px;
 }
 
 /* Navbar Stuff */
