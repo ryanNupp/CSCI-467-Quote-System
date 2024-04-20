@@ -1,4 +1,4 @@
 # CSCI-467-Quote-System
 CSCI 467 Quote System Group Project
 
-GitHub Pages Deployment: https://ryannupp.github.io/CSCI-467-Quote-System/
+Hosted on NIU Student CS server: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/
