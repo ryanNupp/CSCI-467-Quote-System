@@ -24,7 +24,7 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">site navigation (temporary)</button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="admin.html">admin</a></li>
-            <li><a class="dropdown-item" href="hq_sanction.php">hq</a></li>
+            <li><a class="dropdown-item" href="hq_sanction.html">hq</a></li>
         </ul>
     </div>
 
