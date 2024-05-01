@@ -4,9 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- This includes the CSS & JS files for Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <!-- This includes the JS file for jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <title>Portal</title>
+    <link rel="icon" href="../images/favicon.ico">
 </head>
 
 <body data-bs-theme="dark">
@@ -14,8 +24,7 @@
         <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">site navigation (temporary)</button>
         <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="admin.html">admin</a></li>
-            <li><a class="dropdown-item" href="quote_editor.html">hq</a></li>
-            <li><a class="dropdown-item" href="associate.html">associate</a></li>
+            <li><a class="dropdown-item" href="hq_sanction.php">hq</a></li>
         </ul>
     </div>
 
@@ -45,46 +54,36 @@
 
     <!-- Login functionality with PHP, compares user input username & password against users in database -->
     <?php
+        include ("../backend/!query.php");
         session_start();
 
         if (array_key_exists('submit', $_POST)){
 
-            try{
-                $dsn = "mysql:host=courses;dbname=z1828609";
-                $username = "z1828609";
-                $password = "1999Mar31";
-                $pdo = new PDO($dsn, $username, $password);
-            }
-            catch(PDOexception $e) {
-                echo "Connection to database failed: " . $e->getMessage();
-            }
-
-            $prepared = $pdo->prepare('SELECT accounttype
+            $prepared = $pdo->prepare('SELECT *
                                         FROM Associate
                                         WHERE Associate.username = ?
-                                        AND Associate.password = ?');   
+                                        AND Associate.password = ?');
 
             $success = $prepared->execute(array($_POST["username"], $_POST["password"]));
-
             $rows = $prepared->fetch(PDO::FETCH_ASSOC);
 
             if(!empty($rows))
             {
-                $_SESSION["UserSession"] = $_POST["username"];
-
                 //Associate
                 if($rows['accounttype'] == '0'){
-                    header('Location: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/associate.html');
+                    $_SESSION["associateSession"] = $rows;
+
+                    header('Location: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/frontend/associate.php');
                 }
 
                 //Headquarters
                 else if ($rows['accounttype'] == '1'){
-                    header("location: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/quote_editor.html");
+                    header("location: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/frontend/hq_sanction.php");
                 }
 
                 //Administration
                 else if ($rows['accounttype'] == '2'){
-                    header("location: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/admin.html");
+                    header("location: https://students.cs.niu.edu/~z1967887/CSCI-467-Quote-System/frontend/admin.html");
                 }
             }
             else

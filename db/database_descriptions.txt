@@ -1,0 +1,65 @@
+OUR DATABASE CAN BE FOUND IN z1828609 MariaDB ON NIU HOPPER SERVER
++---------------------+
+| Table Descriptions: |
++---------------------+
+
+
+MariaDB [z1828609]> show tables;
++--------------------+
+| Tables_in_z1828609 |
++--------------------+
+| Associate          |
+| LineItems          |
+| Quote              |
+| SecretNotes        |
++--------------------+
+
+
+MariaDB [z1828609]> describe Associate;
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| id          | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| username    | varchar(255)     | NO   |     | NULL    |                |
+| password    | varchar(255)     | NO   |     | NULL    |                |
+| commission  | decimal(10,2)    | YES  |     | 0.00    |                |
+| accounttype | int(11)          | NO   |     | 0       |                |
+| homeaddress | varchar(255)     | NO   |     | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+
+
+MariaDB [z1828609]> describe LineItems;
++-------------+------------------+------+-----+---------+----------------+
+| Field       | Type             | Null | Key | Default | Extra          |
++-------------+------------------+------+-----+---------+----------------+
+| id          | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| description | varchar(255)     | YES  |     | NULL    |                |
+| price       | decimal(10,2)    | YES  |     | NULL    |                |
+| quote_id    | int(10) unsigned | NO   | MUL | NULL    |                |
++-------------+------------------+------+-----+---------+----------------+
+
+
+MariaDB [z1828609]> describe Quote;
++---------------+------------------+------+-----+---------+----------------+
+| Field         | Type             | Null | Key | Default | Extra          |
++---------------+------------------+------+-----+---------+----------------+
+| quote_id      | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| discount      | decimal(10,2)    | YES  |     | NULL    |                |
+| totalprice    | decimal(10,2)    | YES  |     | NULL    |                |
+| associateID   | int(10) unsigned | NO   | MUL | NULL    |                |
+| quotestatus   | varchar(255)     | NO   |     | open    |                |
+| datefiled     | varchar(255)     | YES  |     | NULL    |                |
+| customer_id   | int(11)          | YES  |     | NULL    |                |
+| customeremail | varchar(255)     | YES  |     | NULL    |                |
+| finalprice    | decimal(10,2)    | NO   |     | 0.00    |                |
++---------------+------------------+------+-----+---------+----------------+
+
+
+MariaDB [z1828609]> describe SecretNotes;
++----------+------------------+------+-----+---------+----------------+
+| Field    | Type             | Null | Key | Default | Extra          |
++----------+------------------+------+-----+---------+----------------+
+| id       | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| note     | varchar(255)     | YES  |     | NULL    |                |
+| quote_id | int(10) unsigned | NO   | MUL | NULL    |                |
++----------+------------------+------+-----+---------+----------------+
