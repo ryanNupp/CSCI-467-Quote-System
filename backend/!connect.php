@@ -3,14 +3,14 @@
 /*===============================================================*/
 
 // ACCESS INFO FOR OUR DATABASE
-$dsn = "mysql:host=courses;dbname=z1828609";
-$username = "z1828609";
-$password = "1999Mar31";
+$dsn = "mysql:host=REDACTED;dbname=REDACTED";
+$username = "REDACTED";
+$password = "REDACTED";
 
 // ACCESS INFO FOR LEGACY DATABASE
-$legDsn = "mysql:host=blitz.cs.niu.edu;port=3306;dbname=csci467";
-$legUsername = "student";
-$legPassword = "student";
+$legDsn = "mysql:host=REDACTED;dbname=REDACTED";
+$legUsername = "REDACTED";
+$legPassword = "REDACTED";
 
 /*===============================================================*/
 

@@ -22,8 +22,8 @@ function sanction_email($pdo, $pdoLegacy, $quote_id) {
   }
   // encode json data
   $returnData = array(
-    'api_key' => 'api-8FEEEA03F74B4CBCBC4484832A00A104',
-    'sender' => 'order-details@blub.lol',
+    'api_key' => 'REDACTED',
+    'sender' => 'REDACTED',
     'to' => "[\'" . $quote['customeremail'] . "\']",
     'subject' => "Your Order # " . $quote_id . " was placed",
     'text_body' => "
@@ -67,8 +67,8 @@ function process_email($pdo, $pdoLegacy, $quote_id) {
 
   // encode json data
   $returnData = array(
-    'api_key' => 'api-8FEEEA03F74B4CBCBC4484832A00A104',
-    'sender' => 'order-details@blub.lol',
+    'api_key' => 'REDACTED',
+    'sender' => 'REDACTED',
     'to' => [ $quote['customeremail'] ],
     'subject' => "Your Order # " . $quote_id . " Was Processed!",
     'text_body' => "
