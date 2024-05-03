@@ -1,10 +1,9 @@
-OUR DATABASE CAN BE FOUND IN z1828609 MariaDB ON NIU HOPPER SERVER
 +---------------------+
 | Table Descriptions: |
 +---------------------+
 
 
-MariaDB [z1828609]> show tables;
+MariaDB > show tables;
 +--------------------+
 | Tables_in_z1828609 |
 +--------------------+
@@ -15,7 +14,7 @@ MariaDB [z1828609]> show tables;
 +--------------------+
 
 
-MariaDB [z1828609]> describe Associate;
+MariaDB > describe Associate;
 +-------------+------------------+------+-----+---------+----------------+
 | Field       | Type             | Null | Key | Default | Extra          |
 +-------------+------------------+------+-----+---------+----------------+
@@ -28,7 +27,7 @@ MariaDB [z1828609]> describe Associate;
 +-------------+------------------+------+-----+---------+----------------+
 
 
-MariaDB [z1828609]> describe LineItems;
+MariaDB > describe LineItems;
 +-------------+------------------+------+-----+---------+----------------+
 | Field       | Type             | Null | Key | Default | Extra          |
 +-------------+------------------+------+-----+---------+----------------+
@@ -39,7 +38,7 @@ MariaDB [z1828609]> describe LineItems;
 +-------------+------------------+------+-----+---------+----------------+
 
 
-MariaDB [z1828609]> describe Quote;
+MariaDB > describe Quote;
 +---------------+------------------+------+-----+---------+----------------+
 | Field         | Type             | Null | Key | Default | Extra          |
 +---------------+------------------+------+-----+---------+----------------+
@@ -55,7 +54,7 @@ MariaDB [z1828609]> describe Quote;
 +---------------+------------------+------+-----+---------+----------------+
 
 
-MariaDB [z1828609]> describe SecretNotes;
+MariaDB > describe SecretNotes;
 +----------+------------------+------+-----+---------+----------------+
 | Field    | Type             | Null | Key | Default | Extra          |
 +----------+------------------+------+-----+---------+----------------+
