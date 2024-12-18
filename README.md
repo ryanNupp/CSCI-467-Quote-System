@@ -9,7 +9,7 @@ Our database was hosted on NIU MariaDB server.
 More information on our tables used can be found in the 'db' folder.
 
 
-**Frontend:**   HTML, Bootstrap, JavaScript, jQuery  
+**Frontend:**   Bootstrap, JavaScript, jQuery  
 
 **Backend:**    PHP  
 
