@@ -13,10 +13,3 @@ More information on our tables used can be found in the 'db' folder.
 
 **Backend:**    PHP  
 
-
-Our front end style was pulled together with Bootstrap:  
-https://getbootstrap.com/
-
-
-Our calls to backend were made on the frontend using jQuery:  
-https://jquery.com/
